@@ -35,7 +35,12 @@ public class Edge {
 
 	//public Edge() {}
 	
-	public Edge(Vertex source, Vertex target) {
+//	public Edge(Vertex source, Vertex target) {
+//		this.source = source;
+//		this.target = target;
+//	}
+	
+	Edge(Vertex source, Vertex target) {
 		this.source = source;
 		this.target = target;
 	}

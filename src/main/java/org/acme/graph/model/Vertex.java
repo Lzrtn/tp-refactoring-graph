@@ -35,8 +35,9 @@ public class Vertex {
 	 */
 	private boolean visited;
 
-	public Vertex() {
-
+	//public Vertex() {}
+	Vertex(){
+		
 	}
 
 	public String getId() {

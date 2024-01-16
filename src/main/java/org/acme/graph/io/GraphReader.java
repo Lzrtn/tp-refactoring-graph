@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.acme.graph.model.Edge;
 //import org.acme.graph.model.Edge;
 import org.acme.graph.model.Graph;
 import org.acme.graph.model.Vertex;
@@ -95,7 +96,8 @@ public class GraphReader {
 			//directEdge.setSource(source);
 			//directEdge.setTarget(target);
 			//graph.getEdges().add(directEdge);
-			graph.createEdge(source, target, id+"-direct");
+			Edge edged = graph.createEdge(source, target, id+"-direct");
+			edged.setGeometry(geometry);
 
 		}
 		if (sens.equals(DOUBLE_SENS) || sens.equals(SENS_INVERSE)) {
@@ -105,7 +107,8 @@ public class GraphReader {
 			//reverseEdge.setSource(target);
 			//reverseEdge.setTarget(source);
 			//graph.getEdges().add(reverseEdge);
-			graph.createEdge(source, target, id+"-reverse");
+			Edge edgei = graph.createEdge(source, target, id+"-reverse");
+			edgei.setGeometry(geometry);
 		}
 	}
 
